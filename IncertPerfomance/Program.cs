@@ -3,9 +3,10 @@
 using System.IO;
 using System.Threading;
 
-string path = @"C:\Users\Fail\Desktop\Modul\IncertPerfomance\Text1.txt";
-FileInfo fileInfo = new FileInfo(path);
-string contents = File.ReadAllText(@"C:\Users\Fail\Desktop\Modul\IncertPerfomance\Text1.txt");
+
+    string path = @"C:\Users\Fail\Desktop\Modul\IncertPerfomance\Text1.txt";
+    FileInfo fileInfo = new FileInfo(path);
+    
 
 if (fileInfo.Exists)
 {
@@ -14,15 +15,7 @@ if (fileInfo.Exists)
     Console.WriteLine($"Время создания: {fileInfo.CreationTime}");
     Console.WriteLine($"Размер: {fileInfo.Length}");
 
-    string s = "";
-    string[] textMass;
-    StreamReader sr = new StreamReader(path);
-    while (sr.EndOfStream != true)
-    {
-        s += sr.ReadLine();
-    }
-    textMass = s.Split(' ');
-    Console.WriteLine(textMass.Length);
-
-
+    string contents = File.ReadAllText(@"C:\Users\Fail\Desktop\Modul\IncertPerfomance\Text1.txt");
+    var contents = new List<contents>();
 }
+
